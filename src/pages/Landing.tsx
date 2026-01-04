@@ -92,7 +92,7 @@ const Landing = () => {
       <header style={styles.header}>
         <button 
           style={styles.loginBtn} 
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/login")}
           onMouseOver={(e) => (e.currentTarget.style.background = "#88C999")}
           onMouseOut={(e) => (e.currentTarget.style.background = "#2F6D46")}
         >
@@ -113,7 +113,7 @@ const Landing = () => {
           <button style={styles.ctaBtn}>Découvrir nos solutions</button>
         </div>
 
-        <div style={styles.imageContent} className="animate-float">
+        <div style={styles.imageContent}>
           <img 
             src="/placeholder.svg" 
             alt="Serre hydroponique moderne" 
