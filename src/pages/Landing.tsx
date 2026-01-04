@@ -79,6 +79,7 @@ const Landing = () => {
     },
     footer: {
       position: "absolute",
+      margin-top: "20px",
       bottom: "20px",
       width: "100%",
       textAlign: "center",
