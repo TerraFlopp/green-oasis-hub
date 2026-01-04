@@ -11,7 +11,7 @@ const Logo = ({ className = "" }: LogoProps) => {
       <img 
         src="/logo-agrotech.png" 
         alt="AgroTech Logo" 
-        className="h-10 w-auto object-contain"
+        className="h-20 w-auto object-contain"
         onError={(e) => {
           // Fallback au cas où l'image ne charge pas
           e.currentTarget.style.display = 'none';
