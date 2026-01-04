@@ -115,7 +115,7 @@ const Landing = () => {
 
         <div style={styles.imageContent}>
           <img 
-            src="/placeholder.svg" 
+            src="/Logo-agrotech.png" 
             alt="Serre hydroponique moderne" 
             style={{ width: "100%", height: "100%", objectFit: "cover" }} 
           />
