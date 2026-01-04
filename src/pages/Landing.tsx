@@ -9,6 +9,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#F5F0E8] flex flex-col items-center px-4 sm:px-6 font-sans">
       
+      {/* HEADER (logo retiré) */}
+      <header className="py-8 sm:py-10 flex flex-col items-center">
+        <h1 className="text-3xl sm:text-4xl font-bold text-[#2D5016]">
+          AgroTech
+        </h1>
+      </header>
 
       {/* MAIN */}
       <main className="w-full max-w-6xl">
@@ -45,7 +51,7 @@ const Index = () => {
             {/* IMAGE */}
             <div className="flex-1 w-full h-56 sm:h-72 md:h-96 rounded-2xl sm:rounded-[30px] overflow-hidden shadow-xl border-4 border-white/50">
               <img
-                src="/serre.jpg"
+                src="/serre.png"
                 className="w-full h-full object-cover"
                 alt="Serre hydroponique"
               />
