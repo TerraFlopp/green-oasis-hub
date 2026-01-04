@@ -79,7 +79,6 @@ const Landing = () => {
     },
     footer: {
       position: "absolute",
-      margin-top: "20px",
       bottom: "20px",
       width: "100%",
       textAlign: "center",
@@ -99,7 +98,7 @@ const Landing = () => {
         >
           Connexion
         </button>
-        <img src="/logo-agrotech.png" alt="Logo AgroTech" style={styles.logo} />
+        <img src="/placeholder.svg" alt="Logo AgroTech" style={styles.logo} />
       </header>
 
       <main style={styles.main}>
@@ -116,7 +115,7 @@ const Landing = () => {
 
         <div style={styles.imageContent}>
           <img 
-            src="/serre.png" 
+            src="/placeholder.svg" 
             alt="Serre hydroponique moderne" 
             style={{ width: "100%", height: "100%", objectFit: "cover" }} 
           />
