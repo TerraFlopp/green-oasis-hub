@@ -1,132 +1,57 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../components/Logo";
 
-const Landing = () => {
-  const navigate = useNavigate();
-
-  const styles: { [key: string]: React.CSSProperties } = {
-    container: {
-      background: "linear-gradient(180deg, #DCD7C9 0%, #E9E6DF 100%)",
-      color: "#2F6D46",
-      minHeight: "100vh",
-      width: "100%",
-      fontFamily: "'Poppins', sans-serif",
-      overflowX: "hidden",
-      position: "relative",
-    },
-    header: {
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: "25px 80px",
-    },
-    logo: {
-      height: "110px",
-    },
-    loginBtn: {
-      background: "#2F6D46",
-      color: "#E9E6DF",
-      border: "none",
-      padding: "10px 25px",
-      borderRadius: "25px",
-      fontWeight: 600,
-      cursor: "pointer",
-      transition: "background 0.3s",
-    },
-    main: {
-      display: "flex",
-      alignItems: "flex-start",
-      justifyContent: "space-between",
-      padding: "40px 80px 0",
-      height: "calc(100vh - 160px)",
-    },
-    textContent: {
-      maxWidth: "600px",
-      marginTop: "60px",
-    },
-    h1: {
-      fontSize: "3rem",
-      color: "#2F6D46",
-      marginBottom: "20px",
-      lineHeight: 1.2,
-    },
-    span: {
-      color: "#E67E22",
-    },
-    p: {
-      fontSize: "1.1rem",
-      marginBottom: "30px",
-      color: "#3a3a3a",
-    },
-    ctaBtn: {
-      background: "#88C999",
-      color: "#E9E6DF",
-      padding: "14px 35px",
-      border: "none",
-      borderRadius: "30px",
-      fontSize: "1.1rem",
-      cursor: "pointer",
-      transition: "transform 0.2s, background 0.3s",
-    },
-    imageContent: {
-      position: "relative",
-      width: "680px",
-      height: "470px",
-      borderRadius: "40px",
-      overflow: "hidden",
-      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-      bottom: "20px",
-    },
-    footer: {
-      position: "absolute",
-      bottom: "20px",
-      width: "100%",
-      textAlign: "center",
-      color: "#444",
-      fontSize: "0.9rem",
-    },
-  };
+const Index = () => {
+  useEffect(() => {
+    document.title = "AgroTech — Cultivons l'avenir ensemble";
+  }, []);
 
   return (
-    <div style={styles.container}>
-      <header style={styles.header}>
-        <button 
-          style={styles.loginBtn} 
-          onClick={() => navigate("/login")}
-          onMouseOver={(e) => (e.currentTarget.style.background = "#88C999")}
-          onMouseOut={(e) => (e.currentTarget.style.background = "#2F6D46")}
-        >
-          Connexion
-        </button>
-        <img src="/logo-agrotech.png" alt="Logo AgroTech" style={styles.logo} />
+    <div className="min-h-screen bg-[#F5F0E8] flex flex-col items-center px-4 sm:px-6 lg:px-8 py-4 sm:py-6 font-sans">
+      <header className="py-6 sm:py-8 lg:py-10 flex flex-col items-center space-y-2 sm:space-y-3">
+        <Logo className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32" />
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#2D5016]">AgroTech</h1>
       </header>
 
-      <main style={styles.main}>
-        <div style={styles.textContent}>
-          <h1 style={styles.h1}>
-            Ensemble, <span style={styles.span}>faisons pousser</span> le monde de demain 🌱
-          </h1>
-          <p style={styles.p}>
-            AgroTech réinvente l’agriculture urbaine grâce à des serres hydroponiques innovantes installées au cœur de la ville. 
-            Rejoignez un mouvement qui fait germer un avenir plus vert, plus sain et plus durable.
-          </p>
-          <button style={styles.ctaBtn}>Découvrir nos solutions</button>
-        </div>
+      <main className="w-full max-w-5xl">
+        <div className="bg-[#E2E8D4] rounded-3xl sm:rounded-[40px] p-6 sm:p-10 md:p-12 lg:p-16 relative overflow-hidden shadow-sm border border-white/20">
+          <Link 
+            to="/login" 
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:left-8 md:right-auto bg-[#2D5016] text-white px-4 py-2 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-medium hover:opacity-90 transition z-20"
+          >
+            Connexion
+          </Link>
+          
+          <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 lg:gap-10 mt-12 sm:mt-10 md:mt-10">
+            <div className="flex-1 space-y-4 sm:space-y-5 lg:space-y-6 text-center md:text-left w-full">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-[#2D5016]">
+                Ensemble, <span className="text-[#D97706]">faisons pousser</span> le futur 🌱
+              </h2>
+              <p className="text-[#4A5D44] text-base sm:text-lg max-w-md mx-auto md:mx-0">
+                AgroTech réinvente l'agriculture urbaine communautaire avec des solutions hydroponiques intelligentes.
+              </p>
+              <button className="bg-[#86C494] text-[#2D5016] px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold hover:scale-105 transition shadow-md text-sm sm:text-base">
+                Découvrir nos solutions
+              </button>
+            </div>
 
-        <div style={styles.imageContent}>
-          <img 
-            src="/serre.png" 
-            alt="Serre hydroponique moderne" 
-            style={{ width: "100%", height: "100%", objectFit: "cover" }} 
-          />
+            <div className="flex-1 w-full h-56 sm:h-72 md:h-80 lg:h-96 rounded-2xl sm:rounded-[30px] overflow-hidden shadow-xl border-2 sm:border-4 border-white/50">
+              <img 
+                src="/serre.jpg" 
+                className="w-full h-full object-cover" 
+                alt="Serre hydroponique moderne" 
+              />
+            </div>
+          </div>
         </div>
       </main>
 
-      <footer style={styles.footer}>
-        © 2025 AgroTech — Cultivons l'avenir ensemble.
+      <footer className="mt-auto py-6 sm:py-8 text-[#4A5D44]/60 text-xs sm:text-sm text-center px-4">
+        © 2026 AgroTech — Cultivons l'avenir ensemble.
       </footer>
     </div>
   );
 };
 
-export default Landing;
+export default Index;
