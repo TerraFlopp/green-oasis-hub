@@ -51,7 +51,7 @@ const Index = () => {
             {/* IMAGE */}
             <div className="flex-1 w-full h-56 sm:h-72 md:h-96 rounded-2xl sm:rounded-[30px] overflow-hidden shadow-xl border-4 border-white/50">
               <img
-                src="/serre.ppg"
+                src="/serre.png"
                 className="w-full h-full object-cover"
                 alt="Serre hydroponique"
               />
