@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Crown, Thermometer, Droplets, FlaskConical } from "lucide-react";
 import Logo from "@/components/Logo";
 import MaintenanceAlert from "@/components/MaintenanceAlert";
@@ -7,6 +8,16 @@ import ReservationSystem from "@/components/ReservationSystem";
 import { Badge } from "@/components/ui/badge";
 
 const Dashboard = () => {
+  const [userName, setUserName] = useState("Thomas");
+
+  useEffect(() => {
+    // Récupération du nom stocké dans le localStorage
+    const storedName = localStorage.getItem("user_name");
+    if (storedName) {
+      setUserName(storedName);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen pb-8">
       {/* Header */}
@@ -14,7 +25,7 @@ const Dashboard = () => {
         <div className="container flex items-center justify-between py-4">
           <div>
             <h1 className="text-lg font-semibold text-foreground">
-              Bienvenue, Thomas
+              Bienvenue, {userName}
             </h1>
             <div className="flex items-center gap-1.5">
               <Crown className="h-3.5 w-3.5 text-warning" />
