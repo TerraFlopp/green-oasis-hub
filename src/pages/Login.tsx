@@ -23,6 +23,9 @@ const Login = () => {
       return;
     }
 
+    // Sauvegarde du nom pour le Dashboard avant la redirection
+    localStorage.setItem("user_name", identifier);
+
     // Simulated login
     navigate("/dashboard");
   };
@@ -60,6 +63,9 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               className="bg-card"
             />
+            <p className="text-xs text-muted-foreground">
+              Entrez n'importe quel mot de passe
+            </p>
           </div>
 
           <Button type="submit" className="w-full">
